@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h2>Word Frequency</h2>
+<h2>
+    {% if db_status == "True" %}
+        Webpage present in DB
+    {% else %}
+        Webpage not present in DB
+    {% endif %}
+</h2>
+<h3>The words are:</h3>
+<p>
+
+    {% for word in word_obj.get_strings %}
+    {{ word }}<br>
+    {% endfor %}
+</p>
+</body>
+</html>

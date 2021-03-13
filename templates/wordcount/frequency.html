@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Frequency
+    </title>
+    <style>
+        .url{
+            width: 80%;
+        }
+    </style>
+
+</head>
+<body>
+<h2>Word Frequency</h2>
+<form action="{% url 'wordcount:search' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="web_url" class="url">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
